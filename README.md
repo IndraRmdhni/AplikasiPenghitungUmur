@@ -1,6 +1,6 @@
 
-# Latihan 2
+# AplikasiPenghitungUmur
 
 
-# Indra Ramadhani (2210010603)
+# Latihan2 - Indra Ramadhani (2210010603)
 
