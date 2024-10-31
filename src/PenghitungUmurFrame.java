@@ -202,7 +202,7 @@ public class PenghitungUmurFrame extends javax.swing.JFrame {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
             String tanggalUlangTahunBerikutnya = ulangTahunBerikutnya.format(formatter);
             txtHariUlangTahunBerikutnya.setText(hariUlangTahunBerikutnya + "(" + tanggalUlangTahunBerikutnya + ")");
-}
+
 // Set stop flag untuk thread sebelumnya
 stopFetching = true;
 if (peristiwaThread != null && peristiwaThread.isAlive()) {
@@ -215,7 +215,7 @@ stopFetching = false;
 peristiwaThread = new Thread(() -> {
     try {
         txtAreaPeristiwa.setText("Tunggu, sedang mengambil data...\n");
-        helper.getPeristiwaBarisPerBaris(txtHariUlangTahunBerikutnya, txtAreaPeristiwa, () -> stopFetching);
+        helper.getPeristiwaBarisPerBaris(ulangTahunBerikutnya, txtAreaPeristiwa, () -> stopFetching);
         if (!stopFetching) {
             javax.swing.SwingUtilities.invokeLater(() -> txtAreaPeristiwa.append("Selesai mengambil data peristiwa"));
         }
@@ -228,7 +228,7 @@ peristiwaThread = new Thread(() -> {
 });
 peristiwaThread.start();       
     }//GEN-LAST:event_btnHitungActionPerformed
-
+    }
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnKeluarActionPerformed
