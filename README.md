@@ -1,2 +1,6 @@
-# AplikasiPenghitungUmur
- Latihan 2 - Nama (NPM)
+
+# Latihan 2
+
+
+# Indra Ramadhani (2210010603)
+
